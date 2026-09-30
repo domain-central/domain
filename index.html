@@ -3,92 +3,434 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central Tok | Official Hub</title>
-    <!-- Automatic redirect to Central Tok after 5 seconds -->
-    <meta http-equiv="refresh" content="5;url=https://thegoogleclassroom.github.io/centraltok/">
+    <title>Central Tok Domains</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #9e9e9e;
+            --table-header-bg: #282828;
+            --table-row-even: #222222;
+            --table-row-odd: #1b1b1b;
+            --table-border: #333333;
+            --link-color: #3b82f6;
+            --link-hover: #60a5fa;
+            --btn-bg: #2a2a2a;
+            --btn-border: #3d3d3d;
+            --discord-purple: #5865F2;
+            --discord-hover: #4752C4;
+        }
+
+        body.light-mode {
+            --bg-color: #e5e5e5;
+            --card-bg: #ffffff;
+            --text-primary: #1e1e1e;
+            --text-secondary: #666666;
+            --table-header-bg: #f0f0f0;
+            --table-row-even: #f9f9f9;
+            --table-row-odd: #ffffff;
+            --table-border: #e0e0e0;
+            --link-color: #2563eb;
+            --link-hover: #1d4ed8;
+            --btn-bg: #e0e0e0;
+            --btn-border: #cccccc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+
         body {
-            background-color: #0f172a;
-            color: #f8fafc;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
+            padding: 30px 15px;
+            transition: background-color 0.2s, color 0.2s;
         }
-        .container {
-            background: #1e293b;
-            padding: 2.5rem;
-            border-radius: 12px;
-            max-width: 500px;
+
+        .wrapper {
             width: 100%;
+            max-width: 900px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 4px;
+            padding: 25px 35px 35px 35px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .top-controls {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+
+        .top-icon-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .top-icon-btn:hover {
+            color: var(--text-primary);
+        }
+
+        h1.title {
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            border: 1px solid #334155;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
         }
-        h1 { margin-top: 0; font-size: 1.75rem; color: #38bdf8; }
-        p { color: #94a3b8; line-height: 1.6; }
-        .status-box {
-            background: #0f172a;
-            border: 1px solid #334155;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-            font-weight: 600;
-        }
-        .status-online { color: #4ade80; }
-        .btn {
-            display: inline-block;
-            width: 100%;
-            padding: 0.85rem;
-            background: #0284c7;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background 0.2s;
-            margin-bottom: 0.75rem;
-        }
-        .btn:hover { background: #0369a1; }
-        .bookmark-note {
+
+        .disclaimer-banner {
+            background-color: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #f87171;
+            padding: 10px 14px;
+            border-radius: 4px;
             font-size: 0.85rem;
-            color: #64748b;
-            margin-top: 1rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .disclaimer-banner i {
+            font-size: 1rem;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: var(--table-header-bg);
+            color: var(--text-secondary);
+            font-weight: 600;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--table-border);
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--table-border);
+            color: var(--text-primary);
+        }
+
+        tr:nth-child(even) td {
+            background-color: var(--table-row-even);
+        }
+
+        tr:nth-child(odd) td {
+            background-color: var(--table-row-odd);
+        }
+
+        td a {
+            color: var(--link-color);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        td a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        .status-cell {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .section-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .legends-list {
+            list-style: none;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .legends-list li {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .connect-section {
+            margin-bottom: 10px;
+        }
+
+        .discord-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--discord-purple);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 8px 16px;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .discord-btn:hover {
+            background-color: var(--discord-hover);
+        }
+
+        .footer-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 6px;
+        }
+
+        .action-btn {
+            background-color: var(--btn-bg);
+            border: 1px solid var(--btn-border);
+            color: var(--text-primary);
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .action-btn:hover {
+            opacity: 0.8;
+        }
+
+        .metadata {
+            text-align: right;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0284c7;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 1000;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 20px 15px;
+            }
+
+            h1.title {
+                font-size: 1.6rem;
+            }
+
+            .footer-toolbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .metadata {
+                text-align: left;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Central Tok Portal</h1>
-    <p>Bookmark this hub page! If our main address ever changes, this page will always automatically redirect you to our newest active domain.</p>
+    <div class="wrapper">
+        <div class="card">
+            <!-- Top Icons -->
+            <div class="top-controls">
+                <button class="top-icon-btn" id="theme-toggle" title="Toggle Theme">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                <button class="top-icon-btn" id="flag-btn" title="Report issue">
+                    <i class="fa-solid fa-flag"></i>
+                </button>
+            </div>
 
-    <div class="status-box">
-        Current Site Status: <span class="status-online">● Online</span>
+            <!-- Page Title -->
+            <h1 class="title">Central Tok Domains</h1>
+
+            <!-- Unblocked Games Notice -->
+            <div class="disclaimer-banner">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span><strong>Notice:</strong> This website is an official domain directory hub. It is <u>NOT</u> meant or hosted for unblocked games.</span>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Domain</th>
+                            <th>Status</th>
+                            <th>Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://thegoogleclassroom.github.io/centraltok/" target="_blank">https://thegoogleclassroom.github.io/centraltok/</a></td>
+                            <td>
+                                <div class="status-cell">
+                                    <span>❌</span>
+                                    <span>(redirects to <a href="https://thegoogleclassroom.github.io/centraltok/" target="_blank">https://centraltok.pages.dev</a>)</span>
+                                </div>
+                            </td>
+                            <td>Main</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://centraltok.pages.dev" target="_blank">https://centraltok.pages.dev</a></td>
+                            <td>
+                                <div class="status-cell">
+                                    <span>🟡</span>
+                                    <span>(blocked in some networks)</span>
+                                </div>
+                            </td>
+                            <td>CF dep</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://centraltok.org" target="_blank">https://centraltok.org</a></td>
+                            <td>
+                                <div class="status-cell">
+                                    <span>✅</span>
+                                </div>
+                            </td>
+                            <td>CF dep</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://centraltok.st" target="_blank">https://centraltok.st</a></td>
+                            <td>
+                                <div class="status-cell">
+                                    <span>✅</span>
+                                </div>
+                            </td>
+                            <td>New Domain, VPS dep</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-title">Legends:</div>
+            <ul class="legends-list">
+                <li><span>✅</span> : Active</li>
+                <li><span>🟡</span> : Active, might not work in all regions</li>
+                <li><span>❌</span> : Inactive</li>
+            </ul>
+
+            <div class="connect-section">
+                <div class="section-title">connect:</div>
+                <a href="https://discord.gg" target="_blank" class="discord-btn">
+                    <i class="fa-brands fa-discord"></i> DISCORD
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-toolbar">
+            <div class="action-btns">
+                <button class="action-btn" id="edit-btn">Edit</button>
+                <button class="action-btn" id="export-btn">Export ▾</button>
+            </div>
+            <div class="metadata">
+                <div>Pub: 12 Aug 2026 13:06 UTC</div>
+                <div>Edit: 22 Aug 2026 11:15 UTC</div>
+                <div>Views: <span id="views-count">126631</span></div>
+            </div>
+        </div>
     </div>
 
-    <!-- Direct link to Central Tok -->
-    <a href="https://thegoogleclassroom.github.io/centraltok/" class="btn">Proceed to Central Tok Now</a>
+    <div class="toast" id="toast">Copied export data!</div>
 
-    <p style="font-size: 0.9rem;">Redirecting automatically in <span id="countdown">5</span> seconds...</p>
+    <script>
+        // Theme toggle logic
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+        });
 
-    <div class="bookmark-note">
-        <strong>Press Ctrl + D (Cmd + D on Mac)</strong> to bookmark this status page.
-    </div>
-</div>
+        // Toast functionality
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2500);
+        }
 
-<script>
-    // 5-second countdown timer UI
-    let seconds = 5;
-    const countdownEl = document.getElementById('countdown');
-    const timer = setInterval(() => {
-        seconds--;
-        if (countdownEl) countdownEl.innerText = seconds;
-        if (seconds <= 0) clearInterval(timer);
-    }, 1000);
-</script>
+        // Action buttons listeners
+        document.getElementById('edit-btn').addEventListener('click', () => {
+            showToast('Editing mode requested');
+        });
 
+        document.getElementById('export-btn').addEventListener('click', () => {
+            const domainData = "https://thegoogleclassroom.github.io/centraltok/\nhttps://centraltok.pages.dev\nhttps://centraltok.org\nhttps://centraltok.st";
+            
+            // Fallback copy logic for iFrame environment
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = domainData;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            showToast('Domains copied to clipboard!');
+        });
+
+        document.getElementById('flag-btn').addEventListener('click', () => {
+            showToast('Issue flag submitted');
+        });
+    </script>
 </body>
 </html>
