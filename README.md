@@ -1,29 +1,21 @@
-# AuraOSProxy1
+Central Tok - Official Hub Page
 
-A lightweight proxy UI and web app launcher built on a single-page `index.html` frontend with Ultraviolet proxy support.
+Notice: This website and repository are NOT intended, maintained, or hosted for "unblocked games" or bypassing network restrictions.
 
-## Overview
+📌 Purpose
 
-- `index.html` is the main landing page and search interface.
-- `app/` contains the proxy UI assets, tab shell, games, and support scripts.
-- `app/uv/` contains Ultraviolet proxy bundle, handler, config, and service worker files.
+This repository hosts a permanent status and entry portal for Central Tok. Its primary function is to serve as a reliable, stable domain bookmark for users to find the official, active web destination.
 
-## Run locally
+If you arrived here looking for unblocked gaming mirrors, please be aware that this site does not host, curate, or distribute games.
 
-- This repo is configured for Replit via `.replit`.
-- Locally, open `index.html` in a browser or run the hosted frontend with a local static server.
+🔗 Quick Links
 
-Example:
+Official Active Site: Central Tok Portal
 
-```bash
-npm run start
-```
+🛠️ Maintenance
 
-## Notes
+If the primary website destination changes:
 
-- Search functionality is implemented in `index.html` and routes queries through the proxy config when available.
-- `app/tabs.html` provides a tabbed browsing shell with iframe navigation.
+Update the meta refresh tag in index.html.
 
-## Additional documentation
-
-- See `app/README.md` for app-specific features and deployment links.
+Update the manual navigation anchor tag link in index.html.
