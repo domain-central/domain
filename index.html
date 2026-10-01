@@ -1,15 +1,17 @@
-<html lang="en" class="dark"><head>
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central Tok Domains</title>
+    <title>Central Tok Domains Portal</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for crisp retro & modern icons -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -17,7 +19,7 @@
             theme: {
                 extend: {
                     colors: {
-                        darkbg: '#191919',
+                        darkbg: '#181818',
                         darkcard: '#222222',
                         darkheader: '#2a2a2a',
                         darkborder: '#333333',
@@ -34,7 +36,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #191919;
+            background-color: #181818;
             color: #e5e5e5;
         }
         .light body {
@@ -48,6 +50,9 @@
         .light .bg-darkheader {
             background-color: #f4f4f5;
         }
+        .light .bg-darkbg {
+            background-color: #fafafa;
+        }
         .light .border-darkborder {
             border-color: #e4e4e7;
         }
@@ -57,13 +62,15 @@
         .light .text-gray-300 {
             color: #3f3f46;
         }
-        /* Custom scrollbar */
+        .light .text-white {
+            color: #09090b;
+        }
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #191919;
+            background: #181818;
         }
         ::-webkit-scrollbar-thumb {
             background: #333333;
@@ -73,23 +80,23 @@
             background: #444444;
         }
     </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-full{bottom:100%}.right-0{right:0px}.right-4{right:1rem}.right-5{right:1.25rem}.top-4{top:1rem}.top-5{top:1.25rem}.z-20{z-index:20}.z-30{z-index:30}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-8{margin-top:2rem;margin-bottom:2rem}.mb-0\.5{margin-bottom:0.125rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.max-h-60{max-height:15rem}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-28{width:7rem}.w-48{width:12rem}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-lg{max-width:32rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.flex-grow{flex-grow:1}.border-collapse{border-collapse:collapse}.translate-x-full{--tw-translate-x:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-darkborder > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(51 51 51 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-500\/20{border-color:rgb(245 158 11 / 0.2)}.border-amber-500\/30{border-color:rgb(245 158 11 / 0.3)}.border-darkborder{--tw-border-opacity:1;border-color:rgb(51 51 51 / var(--tw-border-opacity, 1))}.border-emerald-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-purple-500\/20{border-color:rgb(168 85 247 / 0.2)}.border-emerald-500\/20{border-color:rgb(16 185 129 / 0.2)}.border-red-500\/20{border-color:rgb(239 68 68 / 0.2)}.border-emerald-500\/50{border-color:rgb(16 185 129 / 0.5)}.bg-amber-500\/10{background-color:rgb(245 158 11 / 0.1)}.bg-amber-500\/5{background-color:rgb(245 158 11 / 0.05)}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-darkbg{--tw-bg-opacity:1;background-color:rgb(25 25 25 / var(--tw-bg-opacity, 1))}.bg-darkcard{--tw-bg-opacity:1;background-color:rgb(34 34 34 / var(--tw-bg-opacity, 1))}.bg-darkheader{--tw-bg-opacity:1;background-color:rgb(42 42 42 / var(--tw-bg-opacity, 1))}.bg-darkheader\/50{background-color:rgb(42 42 42 / 0.5)}.bg-darkheader\/70{background-color:rgb(42 42 42 / 0.7)}.bg-discord{--tw-bg-opacity:1;background-color:rgb(88 101 242 / var(--tw-bg-opacity, 1))}.bg-emerald-500\/10{background-color:rgb(16 185 129 / 0.1)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-emerald-600\/20{background-color:rgb(5 150 105 / 0.2)}.bg-purple-500\/10{background-color:rgb(168 85 247 / 0.1)}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-red-500\/10{background-color:rgb(239 68 68 / 0.1)}.bg-darkheader\/60{background-color:rgb(42 42 42 / 0.6)}.bg-emerald-950\/90{background-color:rgb(2 44 34 / 0.9)}.p-2\.5{padding:0.625rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-1\.5{padding:0.375rem}.p-3\.5{padding:0.875rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-4{padding-bottom:1rem}.pr-1{padding-right:0.25rem}.pt-2{padding-top:0.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:JetBrains Mono, monospace}.font-sans{font-family:Inter, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[10px\]{font-size:10px}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-purple-300{--tw-text-opacity:1;color:rgb(216 180 254 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-200{--tw-text-opacity:1;color:rgb(167 243 208 / var(--tw-text-opacity, 1))}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.hover\:border-gray-500:hover{--tw-border-opacity:1;border-color:rgb(107 114 128 / var(--tw-border-opacity, 1))}.hover\:bg-darkborder:hover{--tw-bg-opacity:1;background-color:rgb(51 51 51 / var(--tw-bg-opacity, 1))}.hover\:bg-darkheader:hover{--tw-bg-opacity:1;background-color:rgb(42 42 42 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-600\/30:hover{background-color:rgb(5 150 105 / 0.3)}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-purple-500:hover{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity, 1))}.hover\:bg-darkheader\/40:hover{background-color:rgb(42 42 42 / 0.4)}.hover\:bg-red-500\/10:hover{background-color:rgb(239 68 68 / 0.1)}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-red-300:hover{--tw-text-opacity:1;color:rgb(252 165 165 / var(--tw-text-opacity, 1))}.focus\:border-emerald-500:focus{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.focus\:border-purple-500:focus{--tw-border-opacity:1;border-color:rgb(168 85 247 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 768px){.md\:w-28{width:7rem}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.right-5{right:1.25rem}.top-5{top:1.25rem}.bottom-0{bottom:0px}.bottom-full{bottom:100%}.right-0{right:0px}.right-4{right:1rem}.top-4{top:1rem}.z-50{z-index:50}.z-20{z-index:20}.z-30{z-index:30}.mx-auto{margin-left:auto;margin-right:auto}.my-8{margin-top:2rem;margin-bottom:2rem}.mb-8{margin-bottom:2rem}.mb-0\.5{margin-bottom:0.125rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.max-h-60{max-height:15rem}.min-h-screen{min-height:100vh}.w-full{width:100%}.w-12{width:3rem}.w-28{width:7rem}.w-48{width:12rem}.max-w-4xl{max-width:56rem}.max-w-sm{max-width:24rem}.max-w-3xl{max-width:48rem}.max-w-lg{max-width:32rem}.flex-1{flex:1 1 0%}.flex-grow{flex-grow:1}.border-collapse{border-collapse:collapse}.translate-x-full{--tw-translate-x:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-4{gap:1rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-darkborder > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(51 51 51 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-darkborder{--tw-border-opacity:1;border-color:rgb(51 51 51 / var(--tw-border-opacity, 1))}.border-amber-500\/20{border-color:rgb(245 158 11 / 0.2)}.border-amber-500\/30{border-color:rgb(245 158 11 / 0.3)}.border-emerald-500\/20{border-color:rgb(16 185 129 / 0.2)}.border-emerald-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-purple-500\/20{border-color:rgb(168 85 247 / 0.2)}.border-red-500\/20{border-color:rgb(239 68 68 / 0.2)}.bg-darkcard{--tw-bg-opacity:1;background-color:rgb(34 34 34 / var(--tw-bg-opacity, 1))}.bg-amber-500\/10{background-color:rgb(245 158 11 / 0.1)}.bg-amber-500\/5{background-color:rgb(245 158 11 / 0.05)}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-darkbg{--tw-bg-opacity:1;background-color:rgb(25 25 25 / var(--tw-bg-opacity, 1))}.bg-darkheader{--tw-bg-opacity:1;background-color:rgb(42 42 42 / var(--tw-bg-opacity, 1))}.bg-darkheader\/50{background-color:rgb(42 42 42 / 0.5)}.bg-darkheader\/60{background-color:rgb(42 42 42 / 0.6)}.bg-darkheader\/70{background-color:rgb(42 42 42 / 0.7)}.bg-discord{--tw-bg-opacity:1;background-color:rgb(88 101 242 / var(--tw-bg-opacity, 1))}.bg-emerald-500\/10{background-color:rgb(16 185 129 / 0.1)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-emerald-600\/20{background-color:rgb(5 150 105 / 0.2)}.bg-purple-500\/10{background-color:rgb(168 85 247 / 0.1)}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-red-500\/10{background-color:rgb(239 68 68 / 0.1)}.p-2\.5{padding:0.625rem}.p-3\.5{padding:0.875rem}.p-1\.5{padding:0.375rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-4{padding-bottom:1rem}.pr-1{padding-right:0.25rem}.pt-2{padding-top:0.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:JetBrains Mono, monospace}.font-sans{font-family:Inter, sans-serif}.text-xs{font-size:0.75rem;line-height:1rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-medium{font-weight:500}.font-bold{font-weight:700}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-purple-300{--tw-text-opacity:1;color:rgb(216 180 254 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.hover\:border-gray-500:hover{--tw-border-opacity:1;border-color:rgb(107 114 128 / var(--tw-border-opacity, 1))}.hover\:bg-darkborder:hover{--tw-bg-opacity:1;background-color:rgb(51 51 51 / var(--tw-bg-opacity, 1))}.hover\:bg-darkheader:hover{--tw-bg-opacity:1;background-color:rgb(42 42 42 / var(--tw-bg-opacity, 1))}.hover\:bg-darkheader\/40:hover{background-color:rgb(42 42 42 / 0.4)}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-600\/30:hover{background-color:rgb(5 150 105 / 0.3)}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-purple-500:hover{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity, 1))}.hover\:bg-red-500\/10:hover{background-color:rgb(239 68 68 / 0.1)}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-red-300:hover{--tw-text-opacity:1;color:rgb(252 165 165 / var(--tw-text-opacity, 1))}.focus\:border-emerald-500:focus{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.focus\:border-purple-500:focus{--tw-border-opacity:1;border-color:rgb(168 85 247 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 768px){.md\:w-28{width:7rem}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-full{bottom:100%}.right-0{right:0px}.right-4{right:1rem}.right-5{right:1.25rem}.top-4{top:1rem}.top-5{top:1.25rem}.z-20{z-index:20}.z-30{z-index:30}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-8{margin-top:2rem;margin-bottom:2rem}.mb-0\.5{margin-bottom:0.125rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.max-h-60{max-height:15rem}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-28{width:7rem}.w-48{width:12rem}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-lg{max-width:32rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.flex-grow{flex-grow:1}.border-collapse{border-collapse:collapse}.translate-x-full{--tw-translate-x:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-darkborder > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(51 51 51 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-500\/20{border-color:rgb(245 158 11 / 0.2)}.border-amber-500\/30{border-color:rgb(245 158 11 / 0.3)}.border-darkborder{--tw-border-opacity:1;border-color:rgb(51 51 51 / var(--tw-border-opacity, 1))}.border-emerald-500\/20{border-color:rgb(16 185 129 / 0.2)}.border-emerald-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-purple-500\/20{border-color:rgb(168 85 247 / 0.2)}.border-red-500\/20{border-color:rgb(239 68 68 / 0.2)}.border-emerald-500\/50{border-color:rgb(16 185 129 / 0.5)}.bg-amber-500\/10{background-color:rgb(245 158 11 / 0.1)}.bg-amber-500\/5{background-color:rgb(245 158 11 / 0.05)}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-darkbg{--tw-bg-opacity:1;background-color:rgb(25 25 25 / var(--tw-bg-opacity, 1))}.bg-darkcard{--tw-bg-opacity:1;background-color:rgb(34 34 34 / var(--tw-bg-opacity, 1))}.bg-darkheader{--tw-bg-opacity:1;background-color:rgb(42 42 42 / var(--tw-bg-opacity, 1))}.bg-darkheader\/50{background-color:rgb(42 42 42 / 0.5)}.bg-darkheader\/60{background-color:rgb(42 42 42 / 0.6)}.bg-darkheader\/70{background-color:rgb(42 42 42 / 0.7)}.bg-discord{--tw-bg-opacity:1;background-color:rgb(88 101 242 / var(--tw-bg-opacity, 1))}.bg-emerald-500\/10{background-color:rgb(16 185 129 / 0.1)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-emerald-600\/20{background-color:rgb(5 150 105 / 0.2)}.bg-purple-500\/10{background-color:rgb(168 85 247 / 0.1)}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-red-500\/10{background-color:rgb(239 68 68 / 0.1)}.bg-emerald-950\/90{background-color:rgb(2 44 34 / 0.9)}.p-1\.5{padding:0.375rem}.p-2\.5{padding:0.625rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-4{padding-bottom:1rem}.pr-1{padding-right:0.25rem}.pt-2{padding-top:0.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:JetBrains Mono, monospace}.font-sans{font-family:Inter, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-purple-300{--tw-text-opacity:1;color:rgb(216 180 254 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-200{--tw-text-opacity:1;color:rgb(167 243 208 / var(--tw-text-opacity, 1))}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.hover\:border-gray-500:hover{--tw-border-opacity:1;border-color:rgb(107 114 128 / var(--tw-border-opacity, 1))}.hover\:bg-darkborder:hover{--tw-bg-opacity:1;background-color:rgb(51 51 51 / var(--tw-bg-opacity, 1))}.hover\:bg-darkheader:hover{--tw-bg-opacity:1;background-color:rgb(42 42 42 / var(--tw-bg-opacity, 1))}.hover\:bg-darkheader\/40:hover{background-color:rgb(42 42 42 / 0.4)}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-600\/30:hover{background-color:rgb(5 150 105 / 0.3)}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-purple-500:hover{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity, 1))}.hover\:bg-red-500\/10:hover{background-color:rgb(239 68 68 / 0.1)}.hover\:text-red-300:hover{--tw-text-opacity:1;color:rgb(252 165 165 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:border-emerald-500:focus{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.focus\:border-purple-500:focus{--tw-border-opacity:1;border-color:rgb(168 85 247 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 768px){.md\:w-28{width:7rem}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}}</style></head>
+</head>
 <body class="min-h-screen flex flex-col justify-between transition-colors duration-200">
 
-    <!-- Toast Notification Container -->
-    <div id="toastContainer" class="fixed top-5 right-5 z-50 flex flex-col gap-2 max-w-sm"><div class="p-3.5 rounded-xl border shadow-xl text-xs font-medium flex items-center justify-between gap-3 bg-darkcard border-darkborder text-white transition-all duration-300 transform translate-x-full"><span>Building &amp; Pushing to GitHub API...</span><button onclick="this.parentElement.remove()" class="text-gray-400 hover:text-white"><i class="fas fa-times"></i></button></div><div class="p-3.5 rounded-xl border shadow-xl text-xs font-medium flex items-center justify-between gap-3 bg-darkcard border-darkborder text-white transition-all duration-300 transform translate-x-full"><span>Building &amp; Pushing to GitHub API...</span><button onclick="this.parentElement.remove()" class="text-gray-400 hover:text-white"><i class="fas fa-times"></i></button></div><div class="p-3.5 rounded-xl border shadow-xl text-xs font-medium flex items-center justify-between gap-3 bg-darkcard border-darkborder text-white transition-all duration-300 transform translate-x-full"><span>Building &amp; Pushing to GitHub API...</span><button onclick="this.parentElement.remove()" class="text-gray-400 hover:text-white"><i class="fas fa-times"></i></button></div></div>
+    <div id="toastContainer" class="fixed top-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
 
-    <!-- Main Content Container -->
+    <!-- Main Outer Container -->
     <div class="max-w-4xl mx-auto w-full px-4 py-8 flex-grow">
         
-        <!-- Top Toolbar / Header Controls -->
         <div class="flex items-center justify-between mb-8 pb-4 border-b border-darkborder">
             <div class="flex items-center gap-3">
-                <button id="themeToggle" class="p-2.5 rounded-lg bg-darkcard border border-darkborder hover:border-gray-500 text-gray-300 hover:text-white transition-all shadow-sm" title="Toggle Light/Dark Theme">
+                <button id="themeToggle" class="p-2.5 rounded-lg bg-darkcard border border-darkborder hover:border-gray-500 text-gray-300 hover:text-white transition-all shadow-sm focus:outline-none" title="Toggle Light/Dark Theme">
                     <i id="themeIcon" class="fas fa-moon text-lg"></i>
                 </button>
-                <span class="text-xs font-mono text-gray-400 px-2 py-1 rounded bg-darkcard border border-darkborder">
-                    <i class="fas fa-globe text-emerald-400 mr-1"></i> https://domain-central.github.io/domain/
+                <span class="text-xs font-mono text-gray-400 px-2.5 py-1.5 rounded-lg bg-darkcard border border-darkborder flex items-center gap-2">
+                    <i class="fas fa-globe text-emerald-400"></i>
+                    <span class="hidden sm:inline">https://domain-central.github.io/domain/</span>
+                    <span class="sm:hidden">domain-central.github.io</span>
                 </span>
             </div>
 
@@ -101,49 +108,48 @@
             </div>
         </div>
 
-        <!-- Portal Header -->
         <div class="text-center mb-8">
             <h1 id="portalTitle" class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">Central Tok Domains</h1>
-            <p id="portalSub" class="text-gray-400 text-sm max-w-lg mx-auto">Official hub for active Central Tok mirror domains, operational statuses, and live updates.</p>
+            <p id="portalSub" class="text-gray-400 text-sm max-w-lg mx-auto">Official directory for Central Tok mirrors, domain statuses, and active node routes.</p>
         </div>
 
-        <!-- Notice / Disclaimer Box -->
         <div class="mb-6 p-4 rounded-xl bg-darkcard border border-amber-500/30 bg-amber-500/5 flex items-start gap-3">
             <div class="text-amber-400 text-lg mt-0.5">
                 <i class="fas fa-triangle-exclamation"></i>
             </div>
             <div class="text-sm">
-                <h3 class="font-semibold text-amber-300 mb-0.5">Notice &amp; Disclaimer</h3>
-                <p class="text-gray-300 leading-relaxed" id="disclaimerText"></p>
+                <h3 class="font-semibold text-amber-300 mb-0.5">Notice & Disclaimer</h3>
+                <p class="text-gray-300 leading-relaxed" id="disclaimerText">
+                    This website serves solely as an official domain directory and routing index for Central Tok services. 
+                    <strong>This is not an unblocked games site</strong> or bypass portal. Please bookmark official mirrors to maintain reliable access.
+                </p>
             </div>
         </div>
 
-        <!-- Legends Section -->
-        <div class="mb-6 p-4 rounded-xl bg-darkcard border border-darkborder">
+        <div class="mb-6 p-4 rounded-xl bg-darkcard border border-darkborder shadow-sm">
             <h2 class="text-xs uppercase font-semibold text-gray-400 tracking-wider mb-3 flex items-center gap-2">
                 <i class="fas fa-info-circle text-blue-400"></i> Status Legend
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
                 <div class="flex items-center gap-2 bg-darkheader/50 p-2.5 rounded-lg border border-darkborder">
                     <span class="text-base">✅</span>
-                    <span class="text-gray-300"><strong>Active</strong> - Fully functional</span>
+                    <span class="text-gray-300"><strong>Active</strong> - Operational</span>
                 </div>
                 <div class="flex items-center gap-2 bg-darkheader/50 p-2.5 rounded-lg border border-darkborder">
                     <span class="text-base">🟡</span>
-                    <span class="text-gray-300"><strong>Regional</strong> - May fail in some regions</span>
+                    <span class="text-gray-300"><strong>Regional</strong> - Blocked in some regions</span>
                 </div>
                 <div class="flex items-center gap-2 bg-darkheader/50 p-2.5 rounded-lg border border-darkborder">
                     <span class="text-base">❌</span>
-                    <span class="text-gray-300"><strong>Inactive</strong> - Offline / Blocked</span>
+                    <span class="text-gray-300"><strong>Inactive</strong> - Offline / Migrated</span>
                 </div>
             </div>
         </div>
 
-        <!-- Domain Status Table -->
         <div class="bg-darkcard border border-darkborder rounded-xl overflow-hidden shadow-xl mb-8">
             <div class="p-4 border-b border-darkborder flex items-center justify-between bg-darkheader">
                 <h2 class="font-semibold text-white flex items-center gap-2">
-                    <i class="fas fa-network-wired text-emerald-400"></i> Domain Mirror Directory
+                    <i class="fas fa-network-wired text-emerald-400"></i> Domain Directory
                 </h2>
                 <span id="domainCount" class="text-xs font-mono text-gray-400 bg-darkbg px-2.5 py-1 rounded-full border border-darkborder">3 domains</span>
             </div>
@@ -153,63 +159,22 @@
                     <thead>
                         <tr class="bg-darkheader/70 text-gray-400 text-xs font-mono uppercase tracking-wider border-b border-darkborder">
                             <th class="py-3 px-4 font-semibold">Domain</th>
-                            <th class="py-3 px-4 font-semibold w-28 text-center">Status</th>
+                            <th class="py-3 px-4 font-semibold w-32 text-center">Status</th>
                             <th class="py-3 px-4 font-semibold">Remark</th>
                         </tr>
                     </thead>
-                    <tbody id="domainTableBody" class="divide-y divide-darkborder text-sm"><tr class="hover:bg-darkheader/40 transition-colors">
-                    <td class="py-3 px-4 font-mono">
-                        <a href="https://thegoogleclassroom.github.io/centraltok/" target="_blank" rel="noopener text-emerald-400 hover:underline flex items-center gap-1.5 w-fit">
-                            <span>https://thegoogleclassroom.github.io/centraltok/</span>
-                            <i class="fas fa-arrow-up-right-from-square text-[10px] text-gray-500"></i>
-                        </a>
-                    </td>
-                    <td class="py-3 px-4 text-center">
-                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold border bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
-                            <span>✅</span>
-                            <span>Active</span>
-                        </span>
-                    </td>
-                    <td class="py-3 px-4 text-gray-300 font-sans text-xs">Primary active official Central Tok node</td>
-                </tr><tr class="hover:bg-darkheader/40 transition-colors">
-                    <td class="py-3 px-4 font-mono">
-                        <a href="https://tiktokk-com.github.io/tiktok.com/" target="_blank" rel="noopener text-emerald-400 hover:underline flex items-center gap-1.5 w-fit">
-                            <span>https://tiktokk-com.github.io/tiktok.com/</span>
-                            <i class="fas fa-arrow-up-right-from-square text-[10px] text-gray-500"></i>
-                        </a>
-                    </td>
-                    <td class="py-3 px-4 text-center">
-                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold border bg-amber-500/10 text-amber-400 border-amber-500/20">
-                            <span>🟡</span>
-                            <span>Region</span>
-                        </span>
-                    </td>
-                    <td class="py-3 px-4 text-gray-300 font-sans text-xs">Blocked for LanSchools, but Not At Home.</td>
-                </tr><tr class="hover:bg-darkheader/40 transition-colors">
-                    <td class="py-3 px-4 font-mono">
-                        <a href="https://domain-coming-soon" target="_blank" rel="noopener text-emerald-400 hover:underline flex items-center gap-1.5 w-fit">
-                            <span>https://domain-coming-soon</span>
-                            <i class="fas fa-arrow-up-right-from-square text-[10px] text-gray-500"></i>
-                        </a>
-                    </td>
-                    <td class="py-3 px-4 text-center">
-                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold border bg-red-500/10 text-red-400 border-red-500/20">
-                            <span>❌</span>
-                            <span>Down</span>
-                        </span>
-                    </td>
-                    <td class="py-3 px-4 text-gray-300 font-sans text-xs">NONE</td>
-                </tr></tbody>
+                    <tbody id="domainTableBody" class="divide-y divide-darkborder text-sm">
+                        <!-- Content dynamically rendered via JS -->
+                    </tbody>
                 </table>
             </div>
         </div>
 
     </div>
 
-    <!-- Footer Toolbar (Rentry style bottom toolbar) -->
-    <footer class="bg-darkcard border-t border-darkborder py-4 px-4 sticky bottom-0 z-20">
+    <footer class="bg-darkcard border-t border-darkborder py-4 px-4 sticky bottom-0 z-20 shadow-lg">
         <div class="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-4 text-xs text-gray-400 font-mono">
-            <!-- Left Info -->
+            <!-- Metadata Info -->
             <div class="flex items-center gap-4 flex-wrap">
                 <div class="flex items-center gap-1.5" title="Publication Date">
                     <i class="far fa-calendar-alt text-gray-500"></i>
@@ -225,7 +190,7 @@
                 </div>
             </div>
 
-            <!-- Right Actions -->
+            <!-- Toolbar Actions -->
             <div class="flex items-center gap-2">
                 <!-- Export Dropdown -->
                 <div class="relative inline-block text-left">
@@ -247,7 +212,7 @@
                     </div>
                 </div>
 
-                <!-- Edit Button -->
+                <!-- Edit Portal Button (Strictly opens PIN Prompt first) -->
                 <button id="editBtn" onclick="openPinModal()" class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold flex items-center gap-1.5 transition-all shadow">
                     <i class="fas fa-lock text-xs"></i>
                     <span>Edit Portal</span>
@@ -256,10 +221,9 @@
         </div>
     </footer>
 
-    <!-- PIN Prompt Modal -->
-    <div id="pinModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-darkcard border border-darkborder rounded-2xl p-6 max-w-sm w-full shadow-2xl relative animate-in fade-in zoom-in duration-200">
-            <button onclick="closePinModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+    <div id="pinModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-darkcard border border-darkborder rounded-2xl p-6 max-w-sm w-full shadow-2xl relative">
+            <button onclick="closePinModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg">
                 <i class="fas fa-times"></i>
             </button>
             <div class="text-center mb-5">
@@ -272,7 +236,8 @@
 
             <form id="pinForm" onsubmit="verifyPin(event)" class="space-y-4">
                 <div>
-                    <input type="password" id="pinInput" maxlength="4" placeholder="••••" autocomplete="off" class="w-full text-center tracking-widest text-2xl font-mono py-2.5 bg-darkbg border border-darkborder rounded-xl text-white focus:outline-none focus:border-emerald-500 transition-all">
+                    <input type="password" id="pinInput" maxlength="4" placeholder="••••" autocomplete="off"
+                           class="w-full text-center tracking-widest text-2xl font-mono py-2.5 bg-darkbg border border-darkborder rounded-xl text-white focus:outline-none focus:border-emerald-500 transition-all">
                     <p id="pinError" class="text-red-400 text-xs text-center mt-2 hidden font-medium">
                         <i class="fas fa-circle-exclamation mr-1"></i> Incorrect PIN. Try again.
                     </p>
@@ -284,8 +249,7 @@
         </div>
     </div>
 
-    <!-- Edit & GitHub Commit Modal -->
-    <div id="editModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto">
+    <div id="editModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4 overflow-y-auto">
         <div class="bg-darkcard border border-darkborder rounded-2xl p-6 max-w-3xl w-full my-8 shadow-2xl relative">
             <div class="flex items-center justify-between pb-4 mb-4 border-b border-darkborder">
                 <h3 class="text-xl font-bold text-white flex items-center gap-2">
@@ -297,7 +261,7 @@
             </div>
 
             <div class="space-y-6">
-                <!-- General Info Edit -->
+                <!-- Title & Disclaimer Inputs -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-mono text-gray-400 mb-1">Portal Title</label>
@@ -309,52 +273,21 @@
                     </div>
                 </div>
 
-                <!-- Table Rows Editor -->
+                <!-- Table Rows Dynamic Editor -->
                 <div>
                     <div class="flex items-center justify-between mb-2">
-                        <label class="text-xs font-mono text-gray-400 uppercase tracking-wider">Domain List Entries</label>
-                        <button type="button" onclick="addEditRow()" class="px-3 py-1 bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600/30 rounded border border-emerald-500/30 text-xs flex items-center gap-1 font-semibold">
+                        <label class="text-xs font-mono text-gray-400 uppercase tracking-wider">Domain Entries</label>
+                        <button type="button" onclick="addEditRow()" class="px-3 py-1 bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600/30 rounded-lg border border-emerald-500/30 text-xs flex items-center gap-1 font-semibold transition-all">
                             <i class="fas fa-plus"></i> Add Domain
                         </button>
                     </div>
 
-                    <div class="space-y-3 max-h-60 overflow-y-auto pr-1" id="editRowsContainer"><div class="flex flex-col md:flex-row items-center gap-2 bg-darkheader/60 p-2.5 rounded-lg border border-darkborder">
-                <input type="text" placeholder="https://domain.com" value="https://thegoogleclassroom.github.io/centraltok/" class="edit-url flex-1 bg-darkbg border border-darkborder rounded px-2.5 py-1.5 text-xs text-white font-mono w-full">
-                <select class="edit-status bg-darkbg border border-darkborder rounded px-2 py-1.5 text-xs text-white w-full md:w-28">
-                    <option value="✅" selected="">✅ Active</option>
-                    <option value="🟡">🟡 Region</option>
-                    <option value="❌">❌ Inactive</option>
-                </select>
-                <input type="text" placeholder="Remark" value="Primary active official Central Tok node" class="edit-remark flex-1 bg-darkbg border border-darkborder rounded px-2.5 py-1.5 text-xs text-white w-full">
-                <button type="button" onclick="this.parentElement.remove()" class="p-1.5 text-red-400 hover:text-red-300 rounded hover:bg-red-500/10">
-                    <i class="fas fa-trash"></i>
-                </button>
-            </div><div class="flex flex-col md:flex-row items-center gap-2 bg-darkheader/60 p-2.5 rounded-lg border border-darkborder">
-                <input type="text" placeholder="https://domain.com" value="https://tiktokk-com.github.io/tiktok.com/" class="edit-url flex-1 bg-darkbg border border-darkborder rounded px-2.5 py-1.5 text-xs text-white font-mono w-full">
-                <select class="edit-status bg-darkbg border border-darkborder rounded px-2 py-1.5 text-xs text-white w-full md:w-28">
-                    <option value="✅">✅ Active</option>
-                    <option value="🟡" selected="">🟡 Region</option>
-                    <option value="❌">❌ Inactive</option>
-                </select>
-                <input type="text" placeholder="Remark" value="Blocked for LanSchools, but Not At Home." class="edit-remark flex-1 bg-darkbg border border-darkborder rounded px-2.5 py-1.5 text-xs text-white w-full">
-                <button type="button" onclick="this.parentElement.remove()" class="p-1.5 text-red-400 hover:text-red-300 rounded hover:bg-red-500/10">
-                    <i class="fas fa-trash"></i>
-                </button>
-            </div><div class="flex flex-col md:flex-row items-center gap-2 bg-darkheader/60 p-2.5 rounded-lg border border-darkborder">
-                <input type="text" placeholder="https://domain.com" value="https://domain-coming-soon" class="edit-url flex-1 bg-darkbg border border-darkborder rounded px-2.5 py-1.5 text-xs text-white font-mono w-full">
-                <select class="edit-status bg-darkbg border border-darkborder rounded px-2 py-1.5 text-xs text-white w-full md:w-28">
-                    <option value="✅">✅ Active</option>
-                    <option value="🟡">🟡 Region</option>
-                    <option value="❌" selected="">❌ Inactive</option>
-                </select>
-                <input type="text" placeholder="Remark" value="NONE" class="edit-remark flex-1 bg-darkbg border border-darkborder rounded px-2.5 py-1.5 text-xs text-white w-full">
-                <button type="button" onclick="this.parentElement.remove()" class="p-1.5 text-red-400 hover:text-red-300 rounded hover:bg-red-500/10">
-                    <i class="fas fa-trash"></i>
-                </button>
-            </div></div>
+                    <div class="space-y-3 max-h-60 overflow-y-auto pr-1" id="editRowsContainer">
+                        <!-- Dynamic Editable Rows -->
+                    </div>
                 </div>
 
-                <!-- Global Publishing via GitHub API Section -->
+                <!-- GitHub Integration Section -->
                 <div class="p-4 rounded-xl bg-darkbg border border-darkborder space-y-3">
                     <div class="flex items-center justify-between">
                         <h4 class="text-sm font-semibold text-white flex items-center gap-2">
@@ -366,32 +299,24 @@
                     </div>
                     
                     <p class="text-xs text-gray-400 leading-relaxed">
-                        To update the website <strong>globally for everyone instantly</strong> at <code class="text-emerald-400">https://domain-central.github.io/domain/</code>, changes must be committed directly to your GitHub repository using a GitHub Personal Access Token (PAT).
+                        To commit changes directly to your repository at <code class="text-emerald-400">https://domain-central.github.io/domain/</code>, enter your GitHub Personal Access Token (PAT). The script uses cache-busting SHA resolution to prevent 409 conflict errors.
                     </p>
 
                     <div>
                         <label class="block text-xs font-mono text-gray-400 mb-1">GitHub Personal Access Token (PAT)</label>
                         <input type="password" id="ghTokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" class="w-full bg-darkcard border border-darkborder rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-purple-500">
-                        <p class="text-[11px] text-gray-500 mt-1">Saved only locally in your browser memory for convenience.</p>
-                    </div>
-
-                    <div class="text-xs text-amber-400 bg-amber-500/10 border border-amber-500/20 p-2.5 rounded-lg flex items-start gap-2">
-                        <i class="fas fa-circle-info mt-0.5 text-sm"></i>
-                        <div>
-                            <strong>How fast do global updates take?</strong><br>
-                            Executing a GitHub commit via API updates the repository code instantly. GitHub Pages usually builds and deploys the update globally to all internet visitors within <strong>30 to 60 seconds</strong>.
-                        </div>
+                        <p class="text-[11px] text-gray-500 mt-1">Stored safely in your local browser memory.</p>
                     </div>
                 </div>
 
-                <!-- Footer Modal Action Buttons -->
+                <!-- Modal Actions -->
                 <div class="flex items-center justify-end gap-3 pt-2">
                     <button onclick="saveChangesLocally()" class="px-4 py-2 rounded-xl bg-darkheader hover:bg-darkborder text-gray-200 border border-darkborder text-sm font-medium transition-all">
-                        Save Local Preview Only
+                        Save Local Preview
                     </button>
-                    <button onclick="commitToGitHub()" class="px-5 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold flex items-center gap-2 transition-all shadow-lg">
+                    <button id="commitBtn" onclick="commitToGitHub()" class="px-5 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold flex items-center gap-2 transition-all shadow-lg">
                         <i class="fas fa-cloud-arrow-up"></i>
-                        <span>Save &amp; Commit to GitHub</span>
+                        <span>Save & Commit to GitHub</span>
                     </button>
                 </div>
             </div>
@@ -399,12 +324,12 @@
     </div>
 
     <script>
-        // Default Domains Data
+        // Core Data Storage State
         let portalData = {
             title: "Central Tok Domains",
             disclaimer: "This website serves solely as an official domain hub and routing index for Central Tok services. This is not an unblocked games site or bypass portal. Please bookmark official mirrors to maintain reliable access.",
             pubDate: "Oct 01, 2026",
-            editDate: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+            editDate: "Just now",
             views: 1482,
             domains: [
                 {
@@ -427,12 +352,17 @@
 
         const CORRECT_PIN = "1205";
 
-        // Initialize state on load
+        // Initial setup on window load
         window.onload = function() {
+            // CRITICAL FIX 1: Ensure modals are explicitly hidden on page load
+            closePinModal();
+            closeEditModal();
+
+            // Load local state & render table
             loadStoredData();
             renderPortal();
             
-            // Close dropdowns on outside click
+            // Close export menu when clicking outside
             window.addEventListener('click', function(e) {
                 const dropdown = document.getElementById('exportMenu');
                 const btn = document.getElementById('exportDropdownBtn');
@@ -466,7 +396,7 @@
             document.getElementById('disclaimerText').innerHTML = portalData.disclaimer;
             document.getElementById('pubDateText').innerText = portalData.pubDate;
             document.getElementById('editDateText').innerText = portalData.editDate;
-            document.getElementById('viewCountText').innerText = portalData.views.toLocaleString();
+            document.getElementById('viewCountText').innerText = Number(portalData.views).toLocaleString();
             document.getElementById('domainCount').innerText = `${portalData.domains.length} domains`;
 
             const tbody = document.getElementById('domainTableBody');
@@ -477,23 +407,29 @@
                 tr.className = "hover:bg-darkheader/40 transition-colors";
 
                 let statusBadgeClass = "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
-                if(d.status === '🟡') statusBadgeClass = "bg-amber-500/10 text-amber-400 border-amber-500/20";
-                if(d.status === '❌') statusBadgeClass = "bg-red-500/10 text-red-400 border-red-500/20";
+                let statusLabel = "Active";
+                if(d.status === '🟡') {
+                    statusBadgeClass = "bg-amber-500/10 text-amber-400 border-amber-500/20";
+                    statusLabel = "Region";
+                } else if(d.status === '❌') {
+                    statusBadgeClass = "bg-red-500/10 text-red-400 border-red-500/20";
+                    statusLabel = "Down";
+                }
 
                 tr.innerHTML = `
-                    <td class="py-3 px-4 font-mono">
-                        <a href="${d.url}" target="_blank" rel="noopener text-emerald-400 hover:underline flex items-center gap-1.5 w-fit">
+                    <td class="py-3.5 px-4 font-mono">
+                        <a href="${d.url}" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline inline-flex items-center gap-1.5">
                             <span>${d.url}</span>
                             <i class="fas fa-arrow-up-right-from-square text-[10px] text-gray-500"></i>
                         </a>
                     </td>
-                    <td class="py-3 px-4 text-center">
+                    <td class="py-3.5 px-4 text-center">
                         <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold border ${statusBadgeClass}">
                             <span>${d.status}</span>
-                            <span>${d.status === '✅' ? 'Active' : d.status === '🟡' ? 'Region' : 'Down'}</span>
+                            <span>${statusLabel}</span>
                         </span>
                     </td>
-                    <td class="py-3 px-4 text-gray-300 font-sans text-xs">${d.remark}</td>
+                    <td class="py-3.5 px-4 text-gray-300 font-sans text-xs">${d.remark}</td>
                 `;
                 tbody.appendChild(tr);
             });
@@ -503,11 +439,13 @@
             document.getElementById('pinInput').value = '';
             document.getElementById('pinError').classList.add('hidden');
             document.getElementById('pinModal').classList.remove('hidden');
-            document.getElementById('pinInput').focus();
+            setTimeout(() => document.getElementById('pinInput').focus(), 50);
         }
 
         function closePinModal() {
             document.getElementById('pinModal').classList.add('hidden');
+            document.getElementById('pinInput').value = '';
+            document.getElementById('pinError').classList.add('hidden');
         }
 
         function verifyPin(e) {
@@ -516,9 +454,11 @@
             if(entered === CORRECT_PIN) {
                 closePinModal();
                 openEditModal();
-                showToast("Identity verified. Welcome Editor!", "success");
+                showToast("Identity verified. Dashboard unlocked!", "success");
             } else {
                 document.getElementById('pinError').classList.remove('hidden');
+                document.getElementById('pinInput').value = '';
+                document.getElementById('pinInput').focus();
             }
         }
 
@@ -529,7 +469,7 @@
             const container = document.getElementById('editRowsContainer');
             container.innerHTML = '';
 
-            portalData.domains.forEach((d, idx) => {
+            portalData.domains.forEach(d => {
                 addEditRow(d.url, d.status, d.remark);
             });
 
@@ -577,7 +517,7 @@
             portalData.title = title;
             portalData.disclaimer = disclaimer;
             portalData.domains = newDomains;
-            portalData.editDate = "Just now";
+            portalData.editDate = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
         }
 
         function saveChangesLocally() {
@@ -588,17 +528,29 @@
             showToast("Changes saved locally!", "success");
         }
 
+        // Utility to safely encode UTF-8 strings (including Emojis) into Base64
+        function utf8ToBase64(str) {
+            const bytes = new TextEncoder().encode(str);
+            let binary = '';
+            for (let i = 0; i < bytes.byteLength; i++) {
+                binary += String.fromCharCode(bytes[i]);
+            }
+            return btoa(binary);
+        }
+
         async function commitToGitHub() {
             const token = document.getElementById('ghTokenInput').value.trim();
             if (!token) {
-                showToast("GitHub Personal Access Token (PAT) is required to publish live!", "error");
+                showToast("GitHub Personal Access Token (PAT) is required!", "error");
                 return;
             }
 
+            const commitBtn = document.getElementById('commitBtn');
+            commitBtn.disabled = true;
+            commitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Fetching SHA & Committing...`;
+
             localStorage.setItem('gh_pat_token', token);
             gatherModalData();
-
-            showToast("Building & Pushing to GitHub API...", "info");
 
             const owner = "domain-central";
             const repo = "domain";
@@ -606,56 +558,66 @@
             const branch = "main";
 
             try {
-                // Generate entire new index.html source code
-                const fullHTML = document.documentElement.outerHTML;
-
-                // 1. Get current file SHA from GitHub API
-                const getFileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
+                // CRITICAL FIX 3: Fetch latest SHA with cache-busting timestamp & headers to avoid 409 Conflict
+                const cacheBuster = Date.now();
+                const getFileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}&t=${cacheBuster}`;
+                
                 const getRes = await fetch(getFileUrl, {
-                    headers: { 'Authorization': `token ${token}` }
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Cache-Control': 'no-cache, no-store, must-revalidate',
+                        'Pragma': 'no-cache'
+                    }
                 });
 
                 let sha = "";
                 if (getRes.ok) {
                     const fileData = await getRes.json();
                     sha = fileData.sha;
+                } else if (getRes.status !== 404) {
+                    const errData = await getRes.json();
+                    throw new Error(errData.message || "Failed to fetch file metadata from GitHub");
                 }
 
-                // 2. Base64 encode full source string safely
-                const encoder = new TextEncoder();
-                const data = encoder.encode(fullHTML);
-                let binary = '';
-                for (let i = 0; i < data.byteLength; i++) {
-                    binary += String.fromCharCode(data[i]);
-                }
-                const contentBase64 = btoa(binary);
+                // Safely convert current outer HTML to Base64
+                const fullHTML = document.documentElement.outerHTML;
+                const contentBase64 = utf8ToBase64(fullHTML);
 
-                // 3. Put commit to repo
+                // Send PUT request with up-to-date SHA
+                const putPayload = {
+                    message: `Update domain portal content via Web Editor`,
+                    content: contentBase64,
+                    branch: branch
+                };
+                if (sha) {
+                    putPayload.sha = sha;
+                }
+
                 const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
                     method: 'PUT',
                     headers: {
                         'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json',
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({
-                        message: `Update domain portal content via Web Editor`,
-                        content: contentBase64,
-                        sha: sha || undefined,
-                        branch: branch
-                    })
+                    body: JSON.stringify(putPayload)
                 });
 
                 if (putRes.ok) {
                     localStorage.setItem('central_tok_portal_data', JSON.stringify(portalData));
                     renderPortal();
                     closeEditModal();
-                    showToast("Committed to GitHub! Live globally in ~30–60 secs.", "success");
+                    showToast("Successfully committed to GitHub! Live in ~30–60 seconds.", "success");
                 } else {
                     const errErr = await putRes.json();
-                    showToast(`Commit failed: ${errErr.message || 'Check PAT permissions'}`, "error");
+                    showToast(`Commit failed (${putRes.status}): ${errErr.message || 'Check PAT permissions'}`, "error");
                 }
             } catch (err) {
                 showToast(`GitHub API Error: ${err.message}`, "error");
+            } finally {
+                commitBtn.disabled = false;
+                commitBtn.innerHTML = `<i class="fas fa-cloud-arrow-up"></i><span>Save & Commit to GitHub</span>`;
             }
         }
 
@@ -667,7 +629,7 @@
             a.download = 'index.html';
             a.click();
             URL.revokeObjectURL(url);
-            showToast("Downloaded index.html file!", "success");
+            showToast("Exported index.html file!", "success");
         }
 
         function exportMarkdown() {
@@ -721,7 +683,7 @@
             if(type === 'success') bg = "bg-emerald-950/90 border-emerald-500/50 text-emerald-200";
             if(type === 'error') bg = "bg-red-950/90 border-red-500/50 text-red-200";
 
-            toast.className = `p-3.5 rounded-xl border shadow-xl text-xs font-medium flex items-center justify-between gap-3 ${bg} transition-all duration-300 transform translate-x-full`;
+            toast.className = `pointer-events-auto p-3.5 rounded-xl border shadow-2xl text-xs font-medium flex items-center justify-between gap-3 ${bg} transition-all duration-300 transform translate-x-full`;
             toast.innerHTML = `<span>${msg}</span><button onclick="this.parentElement.remove()" class="text-gray-400 hover:text-white"><i class="fas fa-times"></i></button>`;
             
             container.appendChild(toast);
@@ -732,6 +694,5 @@
             }, 4000);
         }
     </script>
-
-
-</body></html>
+</body>
+</html>
