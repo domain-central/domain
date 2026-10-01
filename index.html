@@ -1,436 +1,671 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central Tok Domains</title>
-    <!-- Font Awesome for Icons -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for crisp retro & modern icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#191919',
+                        darkcard: '#222222',
+                        darkheader: '#2a2a2a',
+                        darkborder: '#333333',
+                        discord: '#5865F2'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --text-primary: #e0e0e0;
-            --text-secondary: #9e9e9e;
-            --table-header-bg: #282828;
-            --table-row-even: #222222;
-            --table-row-odd: #1b1b1b;
-            --table-border: #333333;
-            --link-color: #3b82f6;
-            --link-hover: #60a5fa;
-            --btn-bg: #2a2a2a;
-            --btn-border: #3d3d3d;
-            --discord-purple: #5865F2;
-            --discord-hover: #4752C4;
-        }
-
-        body.light-mode {
-            --bg-color: #e5e5e5;
-            --card-bg: #ffffff;
-            --text-primary: #1e1e1e;
-            --text-secondary: #666666;
-            --table-header-bg: #f0f0f0;
-            --table-row-even: #f9f9f9;
-            --table-row-odd: #ffffff;
-            --table-border: #e0e0e0;
-            --link-color: #2563eb;
-            --link-hover: #1d4ed8;
-            --btn-bg: #e0e0e0;
-            --btn-border: #cccccc;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px 15px;
-            transition: background-color 0.2s, color 0.2s;
+            font-family: 'Inter', sans-serif;
+            background-color: #191919;
+            color: #e5e5e5;
         }
-
-        .wrapper {
-            width: 100%;
-            max-width: 900px;
+        .light body {
+            background-color: #f4f4f5;
+            color: #18181b;
         }
-
-        .card {
-            background-color: var(--card-bg);
+        .light .bg-darkcard {
+            background-color: #ffffff;
+            border-color: #e4e4e7;
+        }
+        .light .bg-darkheader {
+            background-color: #f4f4f5;
+        }
+        .light .border-darkborder {
+            border-color: #e4e4e7;
+        }
+        .light .text-gray-400 {
+            color: #71717a;
+        }
+        .light .text-gray-300 {
+            color: #3f3f46;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #191919;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333333;
             border-radius: 4px;
-            padding: 25px 35px 35px 35px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-            position: relative;
         }
-
-        .top-controls {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 15px;
-            font-size: 16px;
-            color: var(--text-secondary);
-        }
-
-        .top-icon-btn {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            cursor: pointer;
-            font-size: 16px;
-            transition: color 0.2s;
-        }
-
-        .top-icon-btn:hover {
-            color: var(--text-primary);
-        }
-
-        h1.title {
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: var(--text-primary);
-            letter-spacing: -0.5px;
-        }
-
-        .disclaimer-banner {
-            background-color: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            color: #f87171;
-            padding: 10px 14px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .disclaimer-banner i {
-            font-size: 1rem;
-        }
-
-        .table-container {
-            width: 100%;
-            overflow-x: auto;
-            margin-bottom: 25px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            font-size: 0.95rem;
-        }
-
-        th {
-            background-color: var(--table-header-bg);
-            color: var(--text-secondary);
-            font-weight: 600;
-            padding: 12px 16px;
-            border-bottom: 1px solid var(--table-border);
-        }
-
-        td {
-            padding: 12px 16px;
-            border-bottom: 1px solid var(--table-border);
-            color: var(--text-primary);
-        }
-
-        tr:nth-child(even) td {
-            background-color: var(--table-row-even);
-        }
-
-        tr:nth-child(odd) td {
-            background-color: var(--table-row-odd);
-        }
-
-        td a {
-            color: var(--link-color);
-            text-decoration: none;
-            word-break: break-all;
-        }
-
-        td a:hover {
-            color: var(--link-hover);
-            text-decoration: underline;
-        }
-
-        .status-cell {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .section-title {
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--text-primary);
-            font-size: 0.95rem;
-        }
-
-        .legends-list {
-            list-style: none;
-            margin-bottom: 25px;
-            font-size: 0.9rem;
-            color: var(--text-primary);
-        }
-
-        .legends-list li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .connect-section {
-            margin-bottom: 10px;
-        }
-
-        .discord-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: var(--discord-purple);
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 0.85rem;
-            padding: 8px 16px;
-            border-radius: 3px;
-            text-decoration: none;
-            transition: background-color 0.2s;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .discord-btn:hover {
-            background-color: var(--discord-hover);
-        }
-
-        .footer-toolbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-top: 15px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .action-btns {
-            display: flex;
-            gap: 6px;
-        }
-
-        .action-btn {
-            background-color: var(--btn-bg);
-            border: 1px solid var(--btn-border);
-            color: var(--text-primary);
-            padding: 6px 12px;
-            font-size: 0.85rem;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .action-btn:hover {
-            opacity: 0.8;
-        }
-
-        .metadata {
-            text-align: right;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            line-height: 1.4;
-        }
-
-        /* Toast notification */
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #0284c7;
-            color: white;
-            padding: 10px 16px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            display: none;
-            z-index: 1000;
-        }
-
-        @media (max-width: 600px) {
-            .card {
-                padding: 20px 15px;
-            }
-
-            h1.title {
-                font-size: 1.6rem;
-            }
-
-            .footer-toolbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .metadata {
-                text-align: left;
-            }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444444;
         }
     </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col justify-between transition-colors duration-200">
 
-    <div class="wrapper">
-        <div class="card">
-            <!-- Top Icons -->
-            <div class="top-controls">
-                <button class="top-icon-btn" id="theme-toggle" title="Toggle Theme">
-                    <i class="fa-solid fa-circle-half-stroke"></i>
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="fixed top-5 right-5 z-50 flex flex-col gap-2 max-w-sm"></div>
+
+    <!-- Main Content Container -->
+    <div class="max-w-4xl mx-auto w-full px-4 py-8 flex-grow">
+        
+        <!-- Top Toolbar / Header Controls -->
+        <div class="flex items-center justify-between mb-8 pb-4 border-b border-darkborder">
+            <div class="flex items-center gap-3">
+                <button id="themeToggle" class="p-2.5 rounded-lg bg-darkcard border border-darkborder hover:border-gray-500 text-gray-300 hover:text-white transition-all shadow-sm" title="Toggle Light/Dark Theme">
+                    <i id="themeIcon" class="fas fa-moon text-lg"></i>
                 </button>
-                <button class="top-icon-btn" id="flag-btn" title="Report issue">
-                    <i class="fa-solid fa-flag"></i>
-                </button>
+                <span class="text-xs font-mono text-gray-400 px-2 py-1 rounded bg-darkcard border border-darkborder">
+                    <i class="fas fa-globe text-emerald-400 mr-1"></i> https://domain-central.github.io/domain/
+                </span>
             </div>
 
-            <!-- Page Title -->
-            <h1 class="title">Central Tok Domains</h1>
-
-            <!-- Unblocked Games Notice -->
-            <div class="disclaimer-banner">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <span><strong>Notice:</strong> This website is an official domain directory hub. It is <u>NOT</u> meant or hosted for unblocked games.</span>
-            </div>
-
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Domain</th>
-                            <th>Status</th>
-                            <th>Remark</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="https://thegoogleclassroom.github.io/centraltok/" target="_blank">https://thegoogleclassroom.github.io/centraltok/</a></td>
-                            <td>
-                                <div class="status-cell">
-                                    <span>✅</span>
-                                    <span>(redirects to <a href="https://thegoogleclassroom.github.io/centraltok/" target="_blank">https://centraltok.pages.dev</a>)</span>
-                                </div>
-                            </td>
-                            <td>Main</td>
-                        </tr>
-                        <tr>
-                                <td><a href="https://tiktokk-com.github.io/tiktok.com" target="_blank">https://tiktokk-com.github.io/tiktok.com</a></td>
-                            <td>
-                                <div class="status-cell">
-                                    <span>🟡</span>
-                                    <span>(blocked in some networks)</span>
-                                </div>
-                            </td>
-                            <td>CF dep</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://centraltok.org" target="_blank">https://centraltok.org</a></td>
-                            <td>
-                                <div class="status-cell">
-                                    <span>✅</span>
-                                </div>
-                            </td>
-                            <td>CF dep</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://centraltok.st" target="_blank">https://centraltok.st</a></td>
-                            <td>
-                                <div class="status-cell">
-                                    <span>✅</span>
-                                </div>
-                            </td>
-                            <td>New Domain, VPS dep</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="section-title">Legends:</div>
-            <ul class="legends-list">
-                <li><span>✅</span> : Active</li>
-                <li><span>🟡</span> : Active, might not work in all regions</li>
-                <li><span>❌</span> : Inactive</li>
-            </ul>
-
-            <div class="connect-section">
-                <div class="section-title">connect:</div>
-                <a href="https://discord.gg" target="_blank" class="discord-btn">
-                    <i class="fa-brands fa-discord"></i> DISCORD
+            <div class="flex items-center gap-2">
+                <a href="https://discord.gg" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-discord hover:bg-indigo-600 text-white font-medium text-sm flex items-center gap-2 transition-all shadow-md">
+                    <i class="fab fa-discord text-base"></i>
+                    <span>Connect Discord</span>
                 </a>
             </div>
         </div>
 
-        <div class="footer-toolbar">
-            <div class="action-btns">
-                <button class="action-btn" id="edit-btn">Edit</button>
-                <button class="action-btn" id="export-btn">Export ▾</button>
+        <!-- Portal Header -->
+        <div class="text-center mb-8">
+            <h1 id="portalTitle" class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">Central Tok Domains</h1>
+            <p id="portalSub" class="text-gray-400 text-sm max-w-lg mx-auto">Official hub for active Central Tok mirror domains, operational statuses, and live updates.</p>
+        </div>
+
+        <!-- Notice / Disclaimer Box -->
+        <div class="mb-6 p-4 rounded-xl bg-darkcard border border-amber-500/30 bg-amber-500/5 flex items-start gap-3">
+            <div class="text-amber-400 text-lg mt-0.5">
+                <i class="fas fa-triangle-exclamation"></i>
             </div>
-            <div class="metadata">
-                <div>Pub: 12 Aug 2026 13:06 UTC</div>
-                <div>Edit: 22 Aug 2026 11:15 UTC</div>
-                <div>Views: <span id="views-count">126631</span></div>
+            <div class="text-sm">
+                <h3 class="font-semibold text-amber-300 mb-0.5">Notice & Disclaimer</h3>
+                <p class="text-gray-300 leading-relaxed" id="disclaimerText">
+                    This website serves solely as an official domain hub and routing index for Central Tok services. 
+                    <strong>This is not an unblocked games site</strong> or bypass portal. Please bookmark official mirrors to maintain reliable access.
+                </p>
+            </div>
+        </div>
+
+        <!-- Legends Section -->
+        <div class="mb-6 p-4 rounded-xl bg-darkcard border border-darkborder">
+            <h2 class="text-xs uppercase font-semibold text-gray-400 tracking-wider mb-3 flex items-center gap-2">
+                <i class="fas fa-info-circle text-blue-400"></i> Status Legend
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                <div class="flex items-center gap-2 bg-darkheader/50 p-2.5 rounded-lg border border-darkborder">
+                    <span class="text-base">✅</span>
+                    <span class="text-gray-300"><strong>Active</strong> - Fully functional</span>
+                </div>
+                <div class="flex items-center gap-2 bg-darkheader/50 p-2.5 rounded-lg border border-darkborder">
+                    <span class="text-base">🟡</span>
+                    <span class="text-gray-300"><strong>Regional</strong> - May fail in some regions</span>
+                </div>
+                <div class="flex items-center gap-2 bg-darkheader/50 p-2.5 rounded-lg border border-darkborder">
+                    <span class="text-base">❌</span>
+                    <span class="text-gray-300"><strong>Inactive</strong> - Offline / Blocked</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Domain Status Table -->
+        <div class="bg-darkcard border border-darkborder rounded-xl overflow-hidden shadow-xl mb-8">
+            <div class="p-4 border-b border-darkborder flex items-center justify-between bg-darkheader">
+                <h2 class="font-semibold text-white flex items-center gap-2">
+                    <i class="fas fa-network-wired text-emerald-400"></i> Domain Mirror Directory
+                </h2>
+                <span id="domainCount" class="text-xs font-mono text-gray-400 bg-darkbg px-2.5 py-1 rounded-full border border-darkborder">3 domains</span>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-darkheader/70 text-gray-400 text-xs font-mono uppercase tracking-wider border-b border-darkborder">
+                            <th class="py-3 px-4 font-semibold">Domain</th>
+                            <th class="py-3 px-4 font-semibold w-28 text-center">Status</th>
+                            <th class="py-3 px-4 font-semibold">Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody id="domainTableBody" class="divide-y divide-darkborder text-sm">
+                        <!-- Table rows injected dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Toolbar (Rentry style bottom toolbar) -->
+    <footer class="bg-darkcard border-t border-darkborder py-4 px-4 sticky bottom-0 z-20">
+        <div class="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-4 text-xs text-gray-400 font-mono">
+            <!-- Left Info -->
+            <div class="flex items-center gap-4 flex-wrap">
+                <div class="flex items-center gap-1.5" title="Publication Date">
+                    <i class="far fa-calendar-alt text-gray-500"></i>
+                    <span>Published: <strong id="pubDateText" class="text-gray-300">Oct 01, 2026</strong></span>
+                </div>
+                <div class="flex items-center gap-1.5" title="Last Modified Date">
+                    <i class="far fa-clock text-gray-500"></i>
+                    <span>Edited: <strong id="editDateText" class="text-gray-300">Just now</strong></span>
+                </div>
+                <div class="flex items-center gap-1.5" title="Total Page Views">
+                    <i class="far fa-eye text-gray-500"></i>
+                    <span>Views: <strong id="viewCountText" class="text-gray-300">1,482</strong></span>
+                </div>
+            </div>
+
+            <!-- Right Actions -->
+            <div class="flex items-center gap-2">
+                <!-- Export Dropdown -->
+                <div class="relative inline-block text-left">
+                    <button id="exportDropdownBtn" class="px-3 py-1.5 rounded-lg bg-darkheader hover:bg-darkborder text-gray-300 border border-darkborder flex items-center gap-1.5 transition-all">
+                        <i class="fas fa-download"></i>
+                        <span>Export</span>
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div id="exportMenu" class="hidden absolute right-0 bottom-full mb-2 w-48 rounded-lg bg-darkcard border border-darkborder shadow-2xl py-1 z-30 font-sans">
+                        <button onclick="exportHTML()" class="w-full text-left px-4 py-2 text-xs text-gray-300 hover:bg-darkheader hover:text-white flex items-center gap-2">
+                            <i class="fas fa-code text-blue-400"></i> Export HTML File
+                        </button>
+                        <button onclick="exportMarkdown()" class="w-full text-left px-4 py-2 text-xs text-gray-300 hover:bg-darkheader hover:text-white flex items-center gap-2">
+                            <i class="fab fa-markdown text-purple-400"></i> Export Markdown
+                        </button>
+                        <button onclick="copyLinksToClipboard()" class="w-full text-left px-4 py-2 text-xs text-gray-300 hover:bg-darkheader hover:text-white flex items-center gap-2">
+                            <i class="fas fa-copy text-emerald-400"></i> Copy All Links
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Edit Button -->
+                <button id="editBtn" onclick="openPinModal()" class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold flex items-center gap-1.5 transition-all shadow">
+                    <i class="fas fa-lock text-xs"></i>
+                    <span>Edit Portal</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PIN Prompt Modal -->
+    <div id="pinModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-darkcard border border-darkborder rounded-2xl p-6 max-w-sm w-full shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closePinModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-center mb-5">
+                <div class="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-shield-halved text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white">Enter Editor PIN</h3>
+                <p class="text-xs text-gray-400 mt-1">Authorized modification access required.</p>
+            </div>
+
+            <form id="pinForm" onsubmit="verifyPin(event)" class="space-y-4">
+                <div>
+                    <input type="password" id="pinInput" maxlength="4" placeholder="••••" autocomplete="off"
+                           class="w-full text-center tracking-widest text-2xl font-mono py-2.5 bg-darkbg border border-darkborder rounded-xl text-white focus:outline-none focus:border-emerald-500 transition-all">
+                    <p id="pinError" class="text-red-400 text-xs text-center mt-2 hidden font-medium">
+                        <i class="fas fa-circle-exclamation mr-1"></i> Incorrect PIN. Try again.
+                    </p>
+                </div>
+                <button type="submit" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all shadow">
+                    Unlock Dashboard
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit & GitHub Commit Modal -->
+    <div id="editModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4 overflow-y-auto">
+        <div class="bg-darkcard border border-darkborder rounded-2xl p-6 max-w-3xl w-full my-8 shadow-2xl relative">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-darkborder">
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-edit text-emerald-400"></i> Edit Central Tok Portal Content
+                </h3>
+                <button onclick="closeEditModal()" class="text-gray-400 hover:text-white text-lg">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="space-y-6">
+                <!-- General Info Edit -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-mono text-gray-400 mb-1">Portal Title</label>
+                        <input type="text" id="editTitle" class="w-full bg-darkbg border border-darkborder rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-gray-400 mb-1">Notice / Disclaimer</label>
+                        <input type="text" id="editDisclaimer" class="w-full bg-darkbg border border-darkborder rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500">
+                    </div>
+                </div>
+
+                <!-- Table Rows Editor -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <label class="text-xs font-mono text-gray-400 uppercase tracking-wider">Domain List Entries</label>
+                        <button type="button" onclick="addEditRow()" class="px-3 py-1 bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600/30 rounded border border-emerald-500/30 text-xs flex items-center gap-1 font-semibold">
+                            <i class="fas fa-plus"></i> Add Domain
+                        </button>
+                    </div>
+
+                    <div class="space-y-3 max-h-60 overflow-y-auto pr-1" id="editRowsContainer">
+                        <!-- Dynamic Editable Row Item -->
+                    </div>
+                </div>
+
+                <!-- Global Publishing via GitHub API Section -->
+                <div class="p-4 rounded-xl bg-darkbg border border-darkborder space-y-3">
+                    <div class="flex items-center justify-between">
+                        <h4 class="text-sm font-semibold text-white flex items-center gap-2">
+                            <i class="fab fa-github text-purple-400"></i> Push Global Updates to GitHub Pages
+                        </h4>
+                        <span class="text-[11px] bg-purple-500/10 text-purple-300 border border-purple-500/20 px-2 py-0.5 rounded">
+                            Target: domain-central/domain
+                        </span>
+                    </div>
+                    
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        To update the website <strong>globally for everyone instantly</strong> at <code class="text-emerald-400">https://domain-central.github.io/domain/</code>, changes must be committed directly to your GitHub repository using a GitHub Personal Access Token (PAT).
+                    </p>
+
+                    <div>
+                        <label class="block text-xs font-mono text-gray-400 mb-1">GitHub Personal Access Token (PAT)</label>
+                        <input type="password" id="ghTokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" class="w-full bg-darkcard border border-darkborder rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-purple-500">
+                        <p class="text-[11px] text-gray-500 mt-1">Saved only locally in your browser memory for convenience.</p>
+                    </div>
+
+                    <div class="text-xs text-amber-400 bg-amber-500/10 border border-amber-500/20 p-2.5 rounded-lg flex items-start gap-2">
+                        <i class="fas fa-circle-info mt-0.5 text-sm"></i>
+                        <div>
+                            <strong>How fast do global updates take?</strong><br>
+                            Executing a GitHub commit via API updates the repository code instantly. GitHub Pages usually builds and deploys the update globally to all internet visitors within <strong>30 to 60 seconds</strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Modal Action Buttons -->
+                <div class="flex items-center justify-end gap-3 pt-2">
+                    <button onclick="saveChangesLocally()" class="px-4 py-2 rounded-xl bg-darkheader hover:bg-darkborder text-gray-200 border border-darkborder text-sm font-medium transition-all">
+                        Save Local Preview Only
+                    </button>
+                    <button onclick="commitToGitHub()" class="px-5 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold flex items-center gap-2 transition-all shadow-lg">
+                        <i class="fas fa-cloud-arrow-up"></i>
+                        <span>Save & Commit to GitHub</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="toast" id="toast">Copied export data!</div>
-
     <script>
-        // Theme toggle logic
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-        });
+        // Default Domains Data
+        let portalData = {
+            title: "Central Tok Domains",
+            disclaimer: "This website serves solely as an official domain hub and routing index for Central Tok services. This is not an unblocked games site or bypass portal. Please bookmark official mirrors to maintain reliable access.",
+            pubDate: "Oct 01, 2026",
+            editDate: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+            views: 1482,
+            domains: [
+                {
+                    url: "https://thegoogleclassroom.github.io/centraltok/",
+                    status: "✅",
+                    remark: "Primary active official Central Tok node"
+                },
+                {
+                    url: "https://tiktokk-com.github.io/tiktok.com/",
+                    status: "🟡",
+                    remark: "Blocked for LanSchools, but Not At Home."
+                },
+                {
+                    url: "https://tok-backup.github.io/",
+                    status: "❌",
+                    remark: "Legacy mirror (Migrated to GitHub Pages)"
+                }
+            ]
+        };
 
-        // Toast functionality
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            toast.innerText = msg;
-            toast.style.display = 'block';
-            setTimeout(() => {
-                toast.style.display = 'none';
-            }, 2500);
+        const CORRECT_PIN = "1205";
+
+        // Initialize state on load
+        window.onload = function() {
+            loadStoredData();
+            renderPortal();
+            
+            // Close dropdowns on outside click
+            window.addEventListener('click', function(e) {
+                const dropdown = document.getElementById('exportMenu');
+                const btn = document.getElementById('exportDropdownBtn');
+                if (dropdown && !dropdown.contains(e.target) && !btn.contains(e.target)) {
+                    dropdown.classList.add('hidden');
+                }
+            });
+
+            // Dark/Light Theme toggle
+            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+            document.getElementById('exportDropdownBtn').addEventListener('click', function() {
+                document.getElementById('exportMenu').classList.toggle('hidden');
+            });
+        };
+
+        function loadStoredData() {
+            const saved = localStorage.getItem('central_tok_portal_data');
+            if (saved) {
+                try {
+                    portalData = JSON.parse(saved);
+                } catch(e) {}
+            }
+            const savedToken = localStorage.getItem('gh_pat_token');
+            if (savedToken) {
+                document.getElementById('ghTokenInput').value = savedToken;
+            }
         }
 
-        // Action buttons listeners
-        document.getElementById('edit-btn').addEventListener('click', () => {
-            showToast('Editing mode requested');
-        });
+        function renderPortal() {
+            document.getElementById('portalTitle').innerText = portalData.title;
+            document.getElementById('disclaimerText').innerHTML = portalData.disclaimer;
+            document.getElementById('pubDateText').innerText = portalData.pubDate;
+            document.getElementById('editDateText').innerText = portalData.editDate;
+            document.getElementById('viewCountText').innerText = portalData.views.toLocaleString();
+            document.getElementById('domainCount').innerText = `${portalData.domains.length} domains`;
 
-        document.getElementById('export-btn').addEventListener('click', () => {
-            const domainData = "https://thegoogleclassroom.github.io/centraltok/\nhttps://centraltok.pages.dev\nhttps://centraltok.org\nhttps://centraltok.st";
+            const tbody = document.getElementById('domainTableBody');
+            tbody.innerHTML = '';
+
+            portalData.domains.forEach(d => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-darkheader/40 transition-colors";
+
+                let statusBadgeClass = "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
+                if(d.status === '🟡') statusBadgeClass = "bg-amber-500/10 text-amber-400 border-amber-500/20";
+                if(d.status === '❌') statusBadgeClass = "bg-red-500/10 text-red-400 border-red-500/20";
+
+                tr.innerHTML = `
+                    <td class="py-3 px-4 font-mono">
+                        <a href="${d.url}" target="_blank" rel="noopener text-emerald-400 hover:underline flex items-center gap-1.5 w-fit">
+                            <span>${d.url}</span>
+                            <i class="fas fa-arrow-up-right-from-square text-[10px] text-gray-500"></i>
+                        </a>
+                    </td>
+                    <td class="py-3 px-4 text-center">
+                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold border ${statusBadgeClass}">
+                            <span>${d.status}</span>
+                            <span>${d.status === '✅' ? 'Active' : d.status === '🟡' ? 'Region' : 'Down'}</span>
+                        </span>
+                    </td>
+                    <td class="py-3 px-4 text-gray-300 font-sans text-xs">${d.remark}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function openPinModal() {
+            document.getElementById('pinInput').value = '';
+            document.getElementById('pinError').classList.add('hidden');
+            document.getElementById('pinModal').classList.remove('hidden');
+            document.getElementById('pinInput').focus();
+        }
+
+        function closePinModal() {
+            document.getElementById('pinModal').classList.add('hidden');
+        }
+
+        function verifyPin(e) {
+            e.preventDefault();
+            const entered = document.getElementById('pinInput').value.trim();
+            if(entered === CORRECT_PIN) {
+                closePinModal();
+                openEditModal();
+                showToast("Identity verified. Welcome Editor!", "success");
+            } else {
+                document.getElementById('pinError').classList.remove('hidden');
+            }
+        }
+
+        function openEditModal() {
+            document.getElementById('editTitle').value = portalData.title;
+            document.getElementById('editDisclaimer').value = portalData.disclaimer;
+
+            const container = document.getElementById('editRowsContainer');
+            container.innerHTML = '';
+
+            portalData.domains.forEach((d, idx) => {
+                addEditRow(d.url, d.status, d.remark);
+            });
+
+            document.getElementById('editModal').classList.remove('hidden');
+        }
+
+        function closeEditModal() {
+            document.getElementById('editModal').classList.add('hidden');
+        }
+
+        function addEditRow(url = "", status = "✅", remark = "") {
+            const container = document.getElementById('editRowsContainer');
+            const row = document.createElement('div');
+            row.className = "flex flex-col md:flex-row items-center gap-2 bg-darkheader/60 p-2.5 rounded-lg border border-darkborder";
+            row.innerHTML = `
+                <input type="text" placeholder="https://domain.com" value="${url}" class="edit-url flex-1 bg-darkbg border border-darkborder rounded px-2.5 py-1.5 text-xs text-white font-mono w-full">
+                <select class="edit-status bg-darkbg border border-darkborder rounded px-2 py-1.5 text-xs text-white w-full md:w-28">
+                    <option value="✅" ${status === '✅' ? 'selected' : ''}>✅ Active</option>
+                    <option value="🟡" ${status === '🟡' ? 'selected' : ''}>🟡 Region</option>
+                    <option value="❌" ${status === '❌' ? 'selected' : ''}>❌ Inactive</option>
+                </select>
+                <input type="text" placeholder="Remark" value="${remark}" class="edit-remark flex-1 bg-darkbg border border-darkborder rounded px-2.5 py-1.5 text-xs text-white w-full">
+                <button type="button" onclick="this.parentElement.remove()" class="p-1.5 text-red-400 hover:text-red-300 rounded hover:bg-red-500/10">
+                    <i class="fas fa-trash"></i>
+                </button>
+            `;
+            container.appendChild(row);
+        }
+
+        function gatherModalData() {
+            const title = document.getElementById('editTitle').value.trim() || "Central Tok Domains";
+            const disclaimer = document.getElementById('editDisclaimer').value.trim();
+            const rows = document.querySelectorAll('#editRowsContainer > div');
             
-            // Fallback copy logic for iFrame environment
-            const dummy = document.createElement("textarea");
-            document.body.appendChild(dummy);
-            dummy.value = domainData;
-            dummy.select();
-            document.execCommand("copy");
-            document.body.removeChild(dummy);
+            const newDomains = [];
+            rows.forEach(r => {
+                const url = r.querySelector('.edit-url').value.trim();
+                const status = r.querySelector('.edit-status').value;
+                const remark = r.querySelector('.edit-remark').value.trim();
+                if(url) {
+                    newDomains.push({ url, status, remark });
+                }
+            });
 
-            showToast('Domains copied to clipboard!');
-        });
+            portalData.title = title;
+            portalData.disclaimer = disclaimer;
+            portalData.domains = newDomains;
+            portalData.editDate = "Just now";
+        }
 
-        document.getElementById('flag-btn').addEventListener('click', () => {
-            showToast('Issue flag submitted');
-        });
+        function saveChangesLocally() {
+            gatherModalData();
+            localStorage.setItem('central_tok_portal_data', JSON.stringify(portalData));
+            renderPortal();
+            closeEditModal();
+            showToast("Changes saved locally!", "success");
+        }
+
+        async function commitToGitHub() {
+            const token = document.getElementById('ghTokenInput').value.trim();
+            if (!token) {
+                showToast("GitHub Personal Access Token (PAT) is required to publish live!", "error");
+                return;
+            }
+
+            localStorage.setItem('gh_pat_token', token);
+            gatherModalData();
+
+            showToast("Building & Pushing to GitHub API...", "info");
+
+            const owner = "domain-central";
+            const repo = "domain";
+            const path = "index.html";
+            const branch = "main";
+
+            try {
+                // Generate entire new index.html source code
+                const fullHTML = document.documentElement.outerHTML;
+
+                // 1. Get current file SHA from GitHub API
+                const getFileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
+                const getRes = await fetch(getFileUrl, {
+                    headers: { 'Authorization': `token ${token}` }
+                });
+
+                let sha = "";
+                if (getRes.ok) {
+                    const fileData = await getRes.json();
+                    sha = fileData.sha;
+                }
+
+                // 2. Base64 encode full source string safely
+                const encoder = new TextEncoder();
+                const data = encoder.encode(fullHTML);
+                let binary = '';
+                for (let i = 0; i < data.byteLength; i++) {
+                    binary += String.fromCharCode(data[i]);
+                }
+                const contentBase64 = btoa(binary);
+
+                // 3. Put commit to repo
+                const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: `Update domain portal content via Web Editor`,
+                        content: contentBase64,
+                        sha: sha || undefined,
+                        branch: branch
+                    })
+                });
+
+                if (putRes.ok) {
+                    localStorage.setItem('central_tok_portal_data', JSON.stringify(portalData));
+                    renderPortal();
+                    closeEditModal();
+                    showToast("Committed to GitHub! Live globally in ~30–60 secs.", "success");
+                } else {
+                    const errErr = await putRes.json();
+                    showToast(`Commit failed: ${errErr.message || 'Check PAT permissions'}`, "error");
+                }
+            } catch (err) {
+                showToast(`GitHub API Error: ${err.message}`, "error");
+            }
+        }
+
+        function exportHTML() {
+            const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'index.html';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast("Downloaded index.html file!", "success");
+        }
+
+        function exportMarkdown() {
+            let md = `# ${portalData.title}\n\n`;
+            md += `> ${portalData.disclaimer}\n\n`;
+            md += `| Domain | Status | Remark |\n`;
+            md += `| ------ | :----: | ------ |\n`;
+            portalData.domains.forEach(d => {
+                md += `| ${d.url} | ${d.status} | ${d.remark} |\n`;
+            });
+            
+            const blob = new Blob([md], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'CentralTok_Domains.md';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast("Exported Markdown document!", "success");
+        }
+
+        function copyLinksToClipboard() {
+            const links = portalData.domains.map(d => d.url).join('\n');
+            const textarea = document.createElement('textarea');
+            textarea.value = links;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            showToast("Copied all domain URLs to clipboard!", "success");
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                icon.className = "fas fa-sun text-amber-400 text-lg";
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                icon.className = "fas fa-moon text-lg";
+            }
+        }
+
+        function showToast(msg, type = "info") {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            let bg = "bg-darkcard border-darkborder text-white";
+            if(type === 'success') bg = "bg-emerald-950/90 border-emerald-500/50 text-emerald-200";
+            if(type === 'error') bg = "bg-red-950/90 border-red-500/50 text-red-200";
+
+            toast.className = `p-3.5 rounded-xl border shadow-xl text-xs font-medium flex items-center justify-between gap-3 ${bg} transition-all duration-300 transform translate-x-full`;
+            toast.innerHTML = `<span>${msg}</span><button onclick="this.parentElement.remove()" class="text-gray-400 hover:text-white"><i class="fas fa-times"></i></button>`;
+            
+            container.appendChild(toast);
+            setTimeout(() => toast.classList.remove('translate-x-full'), 10);
+            setTimeout(() => {
+                toast.classList.add('translate-x-full');
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        }
     </script>
 </body>
 </html>
